@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete responsive travel planner</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo">
+            <span>T</span>ravel</a>
+        <br>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <br>
+
+        <form action="" class="search-bar-container">
+            <input type="search" id="search-bar" placeholder="search here...">
+            <button type="submit" id="search-submit-btn" class="fas fa-search"></button>
+            <!-- This is the new submit button -->
+        </form>
+        </form>
+
+
+    </header>
+    <!-- header section ends -->
+
+
+
+    <section class="home" id="home">
+        <div class="card" id="weather-widget">
+            <div class="search">
+                <input id="cityInput" type="text" placeholder="Enter City Name" spellcheck="false">
+                <button><img src="./images/search.png" alt="search"></button>
+            </div>
+            <div class="error">
+                <p>Invalid city name!</p>
+            </div>
+            <div class="weather">
+                <img src="./images/clear.png" alt="icon" class="weather-icon">
+                <h1 class="temp">deg°c</h1>
+                <h2 class="city">city</h2>
+                <div class="details">
+                    <div class="col">
+                        <img src="./images/humidity.png" alt="details-icon">
+                        <div>
+                            <div class="humidity">50%</div>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="./images/wind.png" alt="details-icon">
+                        <div>
+                            <div class="wind">50 km/h</div>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h3> explore the new world</h3>
+            <p> travel around the world and see the beautiful places</p>
+            <!-- <a href="#" class="btn">Discover more</a> -->
+        </div>
+
+        <div class="controls">
+            <span class="vid-btn" data-src="vid-3.mp4"></span>
+        </div>
+
+
+        <div class="video-container">
+            <video src="vid-3.mp4" id="video-slider" loop autoplay muted></video>
+        </div>
+
+
+        <!-- Add these sections just before the closing body tag -->
+
+<!-- Services Section -->
+<section class="services" id="services">
+    <h1 class="heading">Our Services</h1>
+    <div class="box-container">
+        <div class="box">
+            <i class="fas fa-hotel"></i>
+            <h3>Affordable Hotels</h3>
+            <p>Find the best accommodations that fit your budget with our curated selection of hotels worldwide.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-plane"></i>
+            <h3>Flight Booking</h3>
+            <p>Get the best deals on flights with our comprehensive flight search and booking system.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+            <h3>Food & Drinks</h3>
+            <p>Discover local cuisines and recommended restaurants at your travel destination.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-globe-asia"></i>
+            <h3>Travel Guides</h3>
+            <p>Access expert travel guides and tips for your desired destinations.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Review Section -->
+<section class="review" id="review">
+    <h1 class="heading">Client Reviews</h1>
+    <div class="review-slider">
+        <div class="box">
+            <img src="images/pic1.jpg" alt="">
+            <h3>John Doe</h3>
+            <p>Amazing service! The hotel recommendations were perfect for our family vacation.</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/pic2.jpg" alt="">
+            <h3>Jane Smith</h3>
+            <p>The flight booking process was smooth and hassle-free. Highly recommended!</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <h1 class="heading">Contact Us</h1>
+    <div class="row">
+        <div class="contact-info">
+            <div class="box">
+                <i class="fas fa-phone"></i>
+                <div class="info">
+                    <h3>Phone</h3>
+                    <p>+123-456-7890</p>
+                    <p>+111-222-3333</p>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-envelope"></i>
+                <div class="info">
+                    <h3>Email</h3>
+                    <p>travel@example.com</p>
+                    <p>info@example.com</p>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-map"></i>
+                <div class="info">
+                    <h3>Address</h3>
+                    <p>123 Travel Street, City, Country</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form id="contactForm">
+                <div class="inputBox">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="inputBox">
+                    <input type="text" placeholder="Subject" required>
+                    <input type="text" placeholder="Phone" required>
+                </div>
+                <textarea placeholder="Message" cols="30" rows="10" required></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+        
+        <!-- <script src="index.js"></script> -->
+        <script>
+        const apiKey = "ac0ed1198f93036aebb33f211946e18d"; // weather
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";  // weather
+
+        const searchBox = document.querySelector(".search input");
+        const searchBtn = document.querySelector(".search button");
+        const weatherIcon = document.querySelector(".weather-icon");
+        const background = document.querySelector(".background");
+        const overlay = document.querySelector(".overlay");
+
+      
+    async function checkWeather(city) {
+
+    const cachedData = getCachedWeatherData(city);
+    if (cachedData) {
+        updateWeatherUI(cachedData);
+        return;
+    }
+
+    try {
+        const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+        if (response.status == 404) {
+            document.querySelector(".error").style.display = "block";
+            document.querySelector(".weather").style.display = "none";
+            overlay.className = "overlay"; 
+            background.style.backgroundImage = "url('./bg.jpg')";
+        } else {
+            var data = await response.json();
+
+            // Store data in local storage
+            saveWeatherData(city, data);
+            updateWeatherUI(data);
+        }
+    } catch (error) {
+        console.error("Error fetching weather data:", error);
+    }
+}
+
+
+
+function updateWeatherUI(data) {
+    document.querySelector(".city").innerHTML = data.name;
+    document.querySelector(".temp").innerHTML = data.main.temp + "°c";
+    document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+    document.querySelector(".wind").innerHTML = data.wind.speed + " km/hr";
+
+    setWeatherIcon(data.weather[0].main);
+    setWeatherBackground(data.weather[0].main);
+
+    document.querySelector(".weather").style.display = "block";
+    document.querySelector(".error").style.display = "none";
+}
+
+
+function saveWeatherData(city, data) {
+    const weatherData = JSON.parse(localStorage.getItem("weatherData")) || {};
+    weatherData[city.toLowerCase()] = {
+        ...data,
+        timestamp: new Date().getTime(),
+    };
+    localStorage.setItem("weatherData", JSON.stringify(weatherData));
+}
+
+function getCachedWeatherData(city) {
+    const weatherData = JSON.parse(localStorage.getItem("weatherData")) || {};
+    const cityData = weatherData[city.toLowerCase()];
+
+
+    if (cityData && new Date().getTime() - cityData.timestamp < 3600000) {
+        return cityData;
+    }
+    return null;
+}
+
+
+
+
+        function setWeatherIcon(weatherCondition) {
+            const weatherIcon = document.querySelector(".weather-icon");
+
+            switch (weatherCondition) {
+                case "Clear":
+                    weatherIcon.src = "images/clear.png";
+                    break;
+                case "Clouds":
+                    weatherIcon.src = "images/clouds.png";
+                    break;
+                case "Rain":
+                    weatherIcon.src = "images/rain.png";
+                    break;
+                case "Drizzle":
+                    weatherIcon.src = "images/drizzle.png";
+                    break;
+                case "Mist":
+                    weatherIcon.src = "images/mist.png";
+                    break;
+
+
+                default:
+
+                    break;
+            }
+        }
+
+        function setWeatherBackground(weatherCondition) {
+
+            switch (weatherCondition) {
+                case "Clear":
+                    overlay.className = "overlay sunny-overlay";
+                    break;
+                case "Clouds":
+                    overlay.className = "overlay cloudy-overlay";
+                    break;
+                case "Rain":
+                    overlay.className = "overlay rainy-overlay";
+                    break;
+
+
+                default:
+                    overlay.className = "overlay";
+                    break;
+            }
+        }
+
+        searchBtn.addEventListener("click", () => {
+            checkWeather(searchBox.value);
+        });
+
+        const cityInput = document.getElementById("cityInput");
+
+
+        cityInput.addEventListener("keyup", (event) => {
+
+            if (event.key === "Enter") {
+
+                checkWeather(cityInput.value);
+            }
+        });
+
+        searchBtn.addEventListener("click", () => {
+            checkWeather(searchBox.value);
+        });
+
+
+        
+
+        function toggleTheme() {
+            const body = document.body;
+            const themeSwitchBtn = document.querySelector(".theme-switch-btn");
+
+            body.classList.toggle("dark-theme");
+
+
+            if (body.classList.contains("dark-theme")) {
+                themeSwitchBtn.textContent = "Light Mode";
+            } else {
+                themeSwitchBtn.textContent = "Dark Mode";
+            }
+        }
+
+
+
+
+
+
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    alert('Thank you for your message! We will get back to you soon.');
+    this.reset();
+});
+
+
+document.querySelectorAll('header .navbar a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+
+window.addEventListener('scroll', function() {
+    let current = '';
+    const sections = document.querySelectorAll('section');
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 60) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    document.querySelectorAll('header .navbar a').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+            link.classList.add('active');
+        }
+    });
+});
+
+</script>
+</body>
+
+</html>

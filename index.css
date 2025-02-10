@@ -1,0 +1,632 @@
+:root {
+    --primary-color: orange;
+    /* --font-size: 06px; */
+    /* --secondary-color: #3498db;
+        --accent-color: #e74c3c;
+        --text-color: #333;
+        --card-bg: #fff;
+        --hover-color: pink; */
+  }
+  
+  * {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    /* transition: all 1s linear; */
+    outline: none;
+  }
+  
+  ::selection {
+    background-color: rgb(74, 170, 153);
+    color: #fff;
+  }
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    /* page will scroll smoothly from one section to another rather than jumping */
+  
+    /* scroll-padding-top: 7rem; */
+  }
+  
+  body {
+    background-color: #eee;
+    /* overflow-x: hidden; */
+  }
+  
+  section {
+    padding: 2rem 9%;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* The z-index property in CSS is used to control the stacking order of elements on a webpage. When elements overlap, the z-index determines which one appears in front and which one appears behind.
+    Key points about z-index:
+    Defines Stacking Order: Elements with a higher z-index will appear in front of elements with a lower z-index. For example, an element with z-index: 1000 will appear in front of an element with z-index: 500.
+    Applies to Positioned Elements: z-index only works on elements that are positioned. This means the element must have a position value other than static (the default). Common position values are:
+    
+    relative
+    absolute
+    fixed
+    sticky
+    Default Stacking Context: If no z-index is set, elements will stack in the order they appear in the HTML. Elements that come later in the HTML will appear on top of those that come earlier, unless their z-index is explicitly set.
+    
+    Positive and Negative Values:
+    
+    A higher z-index (e.g., 1000) means the element will be in front.
+    A lower or negative z-index (e.g., -1) means the element will be behind other elements. */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background-color: #333;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  
+  header .logo {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+  
+  header .logo span {
+    color: orange;
+  }
+  
+  header .navbar a {
+    font-size: 2rem;
+    color: white;
+    margin-left: 2rem;
+    transition: all 0.3s linear;
+  }
+  
+  header .navbar a:hover {
+    color: orange;
+  }
+  
+  header .navbar a.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  header .icons {
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    margin-left: 2rem;
+    transition: all 0.3s linear;
+  }
+  
+  header .icons i:hover {
+    color: orange;
+  }
+  
+  header .search-bar-container {
+    position: absolute;
+    /* The 100% value means that the element will be positioned just below the bottom of its parent element (if its parent has a defined height). */
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 2rem;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-items: start;
+  
+    z-index: 1001;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.5s ease;
+  }
+  
+  header .search-bar-container.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 0.5s ease;
+  }
+  
+  header .search-bar-container #search-bar {
+    width: 100%;
+    padding: 1rem;
+    text-transform: none;
+    color: orange;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+  }
+  
+  header .search-bar-container label {
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+  }
+  
+  .login-form-container {
+    position: fixed;
+    top: -120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .login-form-container.active {
+    top: 0;
+  }
+  
+  .login-form-container form {
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    width: 40rem;
+  }
+  
+  .login-form-container form h3 {
+    font-size: 3rem;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  .login-form-container form .box {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: #333;
+    margin: 0.6rem 0;
+    border: 0.3rem solid rgba(0, 0, 0, 0.3);
+    text-transform: none;
+  }
+  
+  .login-form-container form .box:focus {
+    border-color: orange;
+  }
+  
+  .login-form-container form #remember {
+    margin: 2rem 0;
+  }
+  
+  .login-form-container form label {
+    font-size: 1.5rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.8rem;
+    color: #fff;
+    background-color: #333;
+    margin: 1rem 0;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    border: 0.5rem solid orange;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  
+  .btn:hover {
+    background-color: orange;
+    transition: all 0.3s linear;
+  }
+  
+  /* .login-form-container form .btn{
+        display: block;
+    } */
+  
+  .login-form-container form p {
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    color: #666;
+  }
+  
+  .login-form-container form p a {
+    color: orange;
+  }
+  
+  .login-form-container form p a:hover {
+    color: lightblue;
+    text-decoration: underline;
+    transition: all 0.3s linear;
+  }
+  
+  .login-form-container #form-close {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .login-form-container #form-close:hover {
+    color: orange;
+    transition: all 0.3s linear;
+  }
+  
+  #menu-bar {
+    color: white;
+    border: 0.1rem solid #fff;
+    border-radius: 5px;
+    font-size: 3rem;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+    /* display:none; */
+  }
+  
+  #menu-bar:hover {
+    color: orange;
+    transition: all 0.3s linear;
+    border: none;
+  }
+  
+  .home {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  }
+  
+  .home .content {
+    text-align: center;
+  }
+  
+  .home .content h3 {
+    font-size: 8rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(214, 142, 8);
+    text-transform: uppercase;
+    text-shadow: 0 3rem 0.7rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .home .content p {
+    font-size: 4rem;
+    font-weight: bolder;
+    color: rgb(214, 142, 8);
+    padding: 1rem 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 0 3rem 0.7rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .home .content .btn {
+    margin-top: 1rem;
+    padding: 2rem 3rem;
+    width: 20%;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-shadow: 0 3rem 0.7rem rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    position: relative;
+  }
+  
+  .video-container {
+    position: fixed;
+    top: 0;
+    left: 0; /* Ensure it's aligned to the left */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  #video-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+
+
+  .card{
+    width: 90%;
+    max-width: 470px;
+    color: rgb(3, 48, 146);
+    font-weight: bold;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 20px 20px;
+    text-align: center;
+    align-items: center;
+}
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search input{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 90px;
+    flex: 1;
+    /* marging ka kya lfda hai */
+    margin-right: 16px;
+    font-size: 18px;
+}
+.search button{
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.search button img{
+    width: 18px;
+}
+
+.weather-icon{
+    width: 170px;
+}
+.weather h1{
+    font-size: 80px;
+    font-weight: 500;
+}
+.weather h2{
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left; 
+}
+.col img{
+    width: 40px;
+    margin-right: 10px;
+}
+.humidity, .wind{
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+/* .weather{
+    display: none;
+} */
+
+.error{
+    text-align: center;
+    /* margin-left: 10px; */
+    margin-top: 10px;
+    font-size: 14px;
+    display: none;
+}
+
+
+.services {
+    background: #f9f9f9;
+    padding: 5rem 9%;
+    margin-top: 8rem;
+}
+
+.heading {
+    text-align: center;
+    padding: 2.5rem 0;
+    font-size: 3.5rem;
+    color: #333;
+}
+
+.services .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+
+.services .box-container .box {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    transition: transform 0.3s ease;
+}
+
+.services .box-container .box:hover {
+    transform: translateY(-1rem);
+}
+
+.services .box-container .box i {
+    font-size: 5rem;
+    color: orange;
+    margin-bottom: 2rem;
+}
+
+.services .box-container .box h3 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.services .box-container .box p {
+    font-size: 1.4rem;
+    color: #666;
+    line-height: 2;
+}
+
+/* Review Section */
+.review {
+    padding: 5rem 9%;
+    background: #fff;
+}
+
+.review-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.review-slider .box {
+    text-align: center;
+    padding: 3rem;
+    background: #f9f9f9;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.review-slider .box img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.review-slider .box h3 {
+    font-size: 2.2rem;
+    color: #333;
+    margin: 1rem 0;
+}
+
+.review-slider .box p {
+    font-size: 1.4rem;
+    color: #666;
+    line-height: 2;
+}
+
+.review-slider .box .stars i {
+    font-size: 1.7rem;
+    color: orange;
+    margin: 0 .3rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 9%;
+    background: #f9f9f9;
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact .row .contact-info {
+    flex: 1 1 35rem;
+}
+
+.contact .row .contact-info .box {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.contact .row .contact-info .box i {
+    font-size: 3rem;
+    color: orange;
+}
+
+.contact .row .contact-info .box .info h3 {
+    font-size: 2rem;
+    color: #333;
+    padding-bottom: .5rem;
+}
+
+.contact .row .contact-info .box .info p {
+    font-size: 1.5rem;
+    color: #666;
+    line-height: 2;
+}
+
+.contact .row .contact-form {
+    flex: 1 1 50rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.contact .row .contact-form .inputBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.contact .row .contact-form .inputBox input {
+    flex: 1 1 40rem;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    color: #666;
+    border: .1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+}
+
+.contact .row .contact-form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    color: #666;
+    border: .1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    margin: 2rem 0;
+    resize: none;
+}
+
+.contact .row .contact-form .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1.2rem 3.5rem;
+    border-radius: .5rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: orange;
+    cursor: pointer;
+    border: none;
+    text-transform: capitalize;
+}
+
+.contact .row .contact-form .btn:hover {
+    background: #333;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .services .box-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .review-slider {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact .row {
+        flex-direction: column;
+    }
+}
